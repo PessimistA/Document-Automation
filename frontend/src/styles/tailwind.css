@@ -1,0 +1,3 @@
+@import 'tailwindcss' source(none); /* this line imports the Tailwind CSS framework which provides utility classes for styling the application */
+@source '../**/*.{js,ts,jsx,tsx}'; /*this line tells Tailwind to scan all JavaScript files in the project for class names to generate the corresponding CSS */
+@import 'tw-animate-css'; /* this line imports the tw-animate-css library which provides pre-defined animation classes that can be used in the project */

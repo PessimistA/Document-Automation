@@ -1,0 +1,14 @@
+version: '3.8'  # Sürüm bilgisi
+
+services:  # Servis tanımları
+  backend:  # Arka plan servisi
+    build: ./backend  # Derleme dizini
+    ports:  # Port eşleştirmesi
+      - "8000:8000"  # Dış ve iç port
+    environment:  # Ortam değişkenleri
+      - LLM_URL=http://host.docker.internal:1234/v1  # Yerel yapay zeka adresi
+    extra_hosts:  # Ağ yönlendirmesi
+      - "host.docker.internal:host-gateway"  # Ana makine köprüsü
+    volumes:  # Kalıcı depolama alanları
+      - ./backend_data/app.db:/app/app.db  # Veritabanı bağlantısı
+      - ./backend_data/local_storage:/app/services/local_storage  # Fiziksel dosya bağlantısı

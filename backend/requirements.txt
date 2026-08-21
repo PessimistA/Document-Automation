@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sqlalchemy
+python-multipart
+python-jose[cryptography]
+pydantic
+aiofiles
+nvidia-ml-py
+openai>=1.0.0
+psutil
+requests
